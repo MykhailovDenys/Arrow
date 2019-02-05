@@ -1,0 +1,26 @@
+{
+  "name": "Arrow",
+  "version": "1.0.0",
+  "description": "Lending Page",
+  "author": "Denys Mykhailov",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "responsive-tabs": "^1.6.3",
+    "rimraf": "latest",
+    "run-sequence": "latest",
+    "scroll-to-element": "^2.0.2"
+  },
+  "devDependencies": {
+    "gulp-tinify": "latest"
+  }
+}

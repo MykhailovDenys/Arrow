@@ -1,0 +1,90 @@
+#contacts {
+
+  background: url(../img/Sep-top.png) 50% 0 no-repeat,
+    url(../img/city.jpg) 50% 50% no-repeat;
+  background-size: contain, cover;
+  padding-bottom: 179px;
+  font-weight: 400;
+  color: #fff;
+
+  .text-summary {
+    color: #fff;
+  }
+
+  .contacts-items {
+    max-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon-img {
+        width: 60px;
+        height: 60px;
+        background: url(../img/contact-icon-sprite.png);
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(2)>.icon-img {
+        background-position-x: -60px;
+      }
+
+      &:nth-child(3)>.icon-img {
+        background-position-x: -120px;
+      }
+
+      &:nth-child(4)>.icon-img {
+        background-position-x: -180px;
+      }
+
+
+      .name {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      .tel {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #contacts {
+
+    .contacts-items {
+
+      .item {
+        flex-basis: 50%;
+
+        &:nth-child(-n+2) {
+          margin-bottom: 40px;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #contacts {
+
+    .contacts-items {
+
+      .item {
+        flex-basis: 100%;
+        
+        &:nth-child(-n+3) {
+          margin-bottom: 40px;
+        }
+      }
+
+    }
+  }
+}

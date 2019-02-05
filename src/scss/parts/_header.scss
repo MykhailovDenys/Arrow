@@ -1,0 +1,168 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  padding-top: 35px;
+
+  &.dark  {
+    padding: 15px 0;
+    background: rgba(0, 0, 0, .8);
+    transition: .5s;
+  }
+  #wrap-header {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+
+    #logo {
+      margin-right: auto;
+    }
+
+    nav {
+
+      .navbar {
+        display: flex;
+
+        li {
+
+          a {
+            display: block;
+            font-size: 1.8em;
+            color: $color-light;
+            padding: 15px 10px;
+
+            &:hover,
+            &.active {
+              background: $accent-color;
+              transition: .5s;
+            }
+          }
+        }
+      }
+    }
+
+    .toggle {
+      display: none;
+
+      .menu-btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+
+        span,
+        span::before,
+        span::after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -2px;
+          margin-left: -15px;
+          width: 30px;
+          height: 3px;
+          background: #222;
+
+        }
+
+        span::before,
+        span::after {
+          content: '';
+          display: block;
+          transition: 1s;
+        }
+
+        span::before {
+          transform: translateY(-7px);
+        }
+
+        span::after {
+          transform: translateY(7px);
+        }
+
+
+      }
+
+      /* ACTIVE */
+      .menu-btn-active {
+
+        transform: rotate(45deg);
+
+        span::before {
+          /* transform: rotateY(35deg); */
+          transform: rotate(86deg);
+
+        }
+
+        span::after {
+          transform: rotate(85deg);
+        }
+
+      }
+
+    }
+  }
+}
+
+/* BURGER MENU BUTTON */
+.menu-btn-active>span::before {
+  transform: rotateY(35deg);
+
+}
+
+
+/* ADAPTIVE */
+@media (max-width: 1599px) {
+  header {
+
+    #wrap-header {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding-top: 0;
+
+    &.dark {
+      padding: 0;
+    }
+    #wrap-header {
+      margin: 0;
+      padding: 15px 30px;
+      width: 100%;
+
+      .toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, .8);
+        top: 81px;
+        left: -100%;
+        transition: .5s;
+
+        &.drop-down-active {
+          left: 0;
+        }
+
+        .navbar {
+          display: block;
+          margin: 20px 0;
+
+          li+li {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

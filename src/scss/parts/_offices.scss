@@ -1,0 +1,103 @@
+#offices {
+  background: url(../img/Sep-top.png) 50% 0 no-repeat,
+    url(../img/Sep-bot.png) 50% 100% no-repeat,
+    url(../img/hero-3-dark.jpg)50% 50%;
+  background-size: contain, contain, cover;
+
+
+  .text-summary {
+    color: #fff;
+  }
+
+  .map-wrap {
+    display: inline-block;
+    position: relative;
+
+    .wrap-marker {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+
+      /* uncomment for animation */
+      /* overflow: hidden;
+      cursor: pointer; */
+
+      i {
+        font-size: 3em;
+        color: $color-light;
+        margin-right: 10px;
+
+      }
+
+      /* uncomment for animation */
+      /* &:hover span {
+        transform: translateX(0);
+      } */
+      span {
+        font-weight: 700;
+        font-size: 1.5em;
+        color: #fff;
+        text-transform: uppercase;
+
+        /* uncomment for animation */
+        /* transform:translateX(-100px);
+        transition: 1s; */
+      }
+    }
+
+    .usa {
+      top: 130px;
+      left: 150px;
+    }
+
+    .france {
+      top: 100px;
+      left: 340px;
+    }
+
+    .egypt {
+      top: 150px;
+      left: 390px;
+
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #offices {
+
+    .map-wrap {
+
+      .wrap-marker {
+        
+        i {
+          font-size: 1.4em;
+        }
+
+        span {
+          font-size: 1.1em;
+        }
+      }
+
+
+      .usa {
+        top: 35%;
+        left: 20%;
+      }
+
+      .france {
+        top: 26%;
+        left: 47%;
+      }
+
+      .egypt {
+        top: 42%;
+        left: 54%;
+      }
+    }
+
+  }
+}
