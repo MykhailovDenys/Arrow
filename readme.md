@@ -15,6 +15,7 @@ _________
 + JavaScript
 + JQuery
 + Gulp.js
+_______
 
 > Semantic code
 
@@ -27,6 +28,6 @@ _________
 > Using sprites
 
 > Various hover effects
-
+_______
 
 ![screen](Arrow.jpg)
