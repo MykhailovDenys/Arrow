@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /* SMOOTHSCROLL TO ANCHORS */
   $('a[data-target^="anchor"]').bind('click.smoothscroll', function () {
     var target = $(this).attr('href'),
-      bl_top = $(target).offset().top - 78;
+    bl_top = $(target).offset().top;
+    if (target == '#portfolio' || target == '#offices' || target == '#contacts') {
+      bl_top += 73;
+    }
+    else {
+      bl_top -= 78;
+    }
     $('body, html').animate({
       scrollTop: bl_top
     }, 700);
@@ -53,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btnScrollDown.addEventListener('click', scrollDown);
   /* END begin Scroll Down Button */
 
-  /* TABS SERG */
+  /* TABS */
   let tabs = document.querySelector(".tabs"),
     prev = tabs.querySelector(".prev"),
     next = tabs.querySelector(".next");
@@ -152,5 +158,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  /* END TABS SERG */
+  /* END TABS */
 });
